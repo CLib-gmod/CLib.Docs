@@ -1,4 +1,3 @@
-
 :root {
 	--content-width: 1200px;
 	--sidebar-width: 330px;
@@ -47,7 +46,10 @@ a {
 	text-decoration: inherit;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
 	font-weight: 400;
 }
 
@@ -220,12 +222,12 @@ nav section details.category {
 	padding-top: var(--padding-tiny);
 }
 
-nav section details.category > ul > li {
+nav section details.category>ul>li {
 	margin: 0;
 	line-height: 1.5;
 }
 
-nav section details.category > ul > li a {
+nav section details.category>ul>li a {
 	display: inline-block;
 	width: 90%;
 }
@@ -259,7 +261,7 @@ article {
 	margin-left: var(--sidebar-width);
 }
 
-article .wrapper > *:first-child {
+article .wrapper>*:first-child {
 	margin-top: 0;
 }
 
@@ -289,11 +291,11 @@ article header.module a {
 	text-decoration: underline;
 }
 
-details.category > summary {
+details.category>summary {
 	list-style: none;
 }
 
-details.category > summary::-webkit-details-marker {
+details.category>summary::-webkit-details-marker {
 	display: none;
 }
 
@@ -473,7 +475,9 @@ a.reference {
 }
 
 /* we have to manually specify these instead of making a shared class since you cannot customize the parameter class in ldoc */
-.parameter, .type, .default {
+.parameter,
+.type,
+.default {
 	display: inline-block;
 	color: rgb(255, 255, 255) !important;
 
