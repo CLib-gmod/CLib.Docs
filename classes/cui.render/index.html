@@ -2,10 +2,10 @@
 
 <html>
 	<head>
-		<title>CLib - CLib Docs</title>
+		<title>CUI.Render - CLib Docs</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="CLib - CLib Docs" />
+		<meta property="og:title" content="CUI.Render - CLib Docs" />
 		<meta property="og:site_name" content="CLib Docs" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -29,7 +29,7 @@
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../hooks/clib/">CLib</a></summary>
 
 									<ul>
@@ -93,7 +93,7 @@ Create											</a>
 
 					<ul>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../classes/cui.render/">CUI.Render</a></summary>
 
 									<ul>
@@ -123,8 +123,8 @@ update											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>CLib</h1>
-	<h2>Все хуки CLib</h2>
+	<h1>CUI.Render</h1>
+	<h2>awd</h2>
 </header>
 
 <p>
@@ -135,13 +135,14 @@ update											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ChangeTheme">
-					<h1><span class="realm client"></span></span>CLib.ChangeTheme(isDark)</h1>
+				<a class="anchor" id="CUI.Render">
+					<h1><span class="realm client"></span></span>Render:CUI.Render(panel, draw)</h1>
 				</a>
 
 
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/render.laux#L28">Посмотреть исходники &raquo;</a>
 
-					<p>Вызывается при смене темы</p>
+					<p>Конструктор</p>
 			</header>
 
 
@@ -151,14 +152,41 @@ update											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">isDark</span>
-
-									<span class="tag"><span class="type">boolean</span></span>
+								<span class="tag parameter">panel</span>
 
 
-								<p> Является ли тема тёмной</p>
+
+								<p> Панель относительно которой будет происходить рендер.</p>
 							</li>
 					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">draw</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+
+								<p> Функция отрисовки.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="update">
+					<h1><span class="realm client"></span></span>Render:update()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/render.laux#L51">Посмотреть исходники &raquo;</a>
+
+					<p>Обновляет отрисовку панели напрямую</p>
+			</header>
+
 
 
 

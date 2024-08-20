@@ -2,10 +2,10 @@
 
 <html>
 	<head>
-		<title>CLib - CLib Docs</title>
+		<title>CLib.String - CLib Docs</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="CLib - CLib Docs" />
+		<meta property="og:title" content="CLib.String - CLib Docs" />
 		<meta property="og:site_name" content="CLib Docs" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -29,7 +29,7 @@
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../hooks/clib/">CLib</a></summary>
 
 									<ul>
@@ -53,7 +53,7 @@ ChangeTheme											</a>
 
 					<ul>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../Модули/clib.string/">CLib.String</a></summary>
 
 									<ul>
@@ -123,8 +123,10 @@ update											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>CLib</h1>
-	<h2>Все хуки CLib</h2>
+	<h1>CLib.String</h1>
+	<h2>
+
+</h2>
 </header>
 
 <p>
@@ -135,13 +137,14 @@ update											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ChangeTheme">
-					<h1><span class="realm client"></span></span>CLib.ChangeTheme(isDark)</h1>
+				<a class="anchor" id="CLib.String.Random">
+					<h1><span class="realm client"></span></span>CLib.String.Random(len)</h1>
 				</a>
 
 
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/string.laux#L11">Посмотреть исходники &raquo;</a>
 
-					<p>Вызывается при смене темы</p>
+					<p>Функция генерации рандомной строки</p>
 			</header>
 
 
@@ -151,15 +154,26 @@ update											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">isDark</span>
+								<span class="tag parameter">len</span>
 
-									<span class="tag"><span class="type">boolean</span></span>
+									<span class="tag"><span class="type">number</span></span>
 
 
-								<p> Является ли тема тёмной</p>
+								<p> Длина строки</p>
 							</li>
 					</ul>
 
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Случайно сгенерированная строка</p>
+							</li>
+
+				</ul>
 
 
 		</section>

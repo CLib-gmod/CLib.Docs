@@ -30,14 +30,14 @@
 					<ul>
 							<li>
 									<details >
-									<summary><a href="../hooks/clib/">CLib</a></summary>
+									<summary><a href="../../hooks/clib/">CLib</a></summary>
 
 									<ul>
 
 
 										<li>
 											<span class="realm client"></span>
-											<a href="../hooks/clib/#ChangeTheme">
+											<a href="../../hooks/clib/#ChangeTheme">
 ChangeTheme											</a>
 										</li>
 
@@ -48,21 +48,66 @@ ChangeTheme											</a>
 				</details>
 				<details class="category" open>
 					<summary>
-						<h2>Libraries</h2>
+						<h2>Модули</h2>
 					</summary>
 
 					<ul>
 							<li>
-									<details open>
-									<summary><a href="../index/">CUI</a></summary>
+									<details >
+									<summary><a href="../../Модули/clib.string/">CLib.String</a></summary>
 
 									<ul>
 
 
 										<li>
 											<span class="realm client"></span>
-											<a href="../index/#Create">
+											<a href="../../Модули/clib.string/#CLib.String.Random">
+CLib.String.Random											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details open>
+									<summary><a href="../../Модули/cui/">CUI</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../Модули/cui/#Create">
 Create											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Classes</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="../../classes/cui.render/">CUI.Render</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../classes/cui.render/#CUI.Render">
+CUI.Render											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../classes/cui.render/#update">
+update											</a>
 										</li>
 
 									</ul>
@@ -95,7 +140,7 @@ Create											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/master/.laux/lib/cui.laux#L10">Посмотреть исходники &raquo;</a>
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/cui.laux#L17">Посмотреть исходники &raquo;</a>
 
 					<p>Функция создания vgui элементов.  Аналогична vgui.Create, но имеет возможность ступенчатого оформления и использования self чтобы не создавать множество переменных.</p>
 			</header>
@@ -152,6 +197,15 @@ Create											</a>
 
 				</ul>
 
+				<h3>Example Usage</h3>
+					<pre><code>CUI.Create('DFrame', function(self)
+    self:SetSize(100, 100)
+    self:Center()
+    CUI.Create('DPanel', function(self)
+        self:Dock(FILL)
+    end, self)
+end)
+</code></pre>
 
 		</section>
 
