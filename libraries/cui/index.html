@@ -2,10 +2,10 @@
 
 <html>
 	<head>
-		<title>CLib - CLib Docs</title>
+		<title>CUI - CLib Docs</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="CLib - CLib Docs" />
+		<meta property="og:title" content="CUI - CLib Docs" />
 		<meta property="og:site_name" content="CLib Docs" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -29,7 +29,7 @@
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../hooks/clib/">CLib</a></summary>
 
 									<ul>
@@ -53,7 +53,7 @@ ChangeTheme											</a>
 
 					<ul>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../index/">CUI</a></summary>
 
 									<ul>
@@ -78,8 +78,8 @@ Create											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>CLib</h1>
-	<h2>Все хуки CLib</h2>
+	<h1>CUI</h1>
+	<h2>CUI модуль</h2>
 </header>
 
 <p>
@@ -90,13 +90,14 @@ Create											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="ChangeTheme">
-					<h1><span class="realm client"></span></span>CLib.ChangeTheme(isDark)</h1>
+				<a class="anchor" id="Create">
+					<h1><span class="realm client"></span></span>Create(name, f, s)</h1>
 				</a>
 
 
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/master/.laux/lib/cui.laux#L10">Посмотреть исходники &raquo;</a>
 
-					<p>Вызывается при смене темы</p>
+					<p>Функция создания vgui элементов.  Аналогична vgui.Create, но имеет возможность ступенчатого оформления и использования self чтобы не создавать множество переменных.</p>
 			</header>
 
 
@@ -106,15 +107,50 @@ Create											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">isDark</span>
+								<span class="tag parameter">name</span>
 
-									<span class="tag"><span class="type">boolean</span></span>
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> Является ли тема тёмной</p>
+								<p> Название класса панели.</p>
 							</li>
 					</ul>
 
+					<ul>
+
+							<li>
+								<span class="tag parameter">f</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+
+								<p> Функция выполняющаяся после создания элемента.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">s</span>
+
+
+									<span class="tag default">default: nil</span>
+
+								<p> Панель-родитель.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">panel</span>
+
+								<p>Созданная панель.</p>
+							</li>
+
+				</ul>
 
 
 		</section>
