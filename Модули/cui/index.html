@@ -56,6 +56,16 @@ CLib.String.Random											</a>
 											<a href="../../Модули/cui/#Create">
 Create											</a>
 										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../Модули/cui/#CreateFont">
+CreateFont											</a>
+										</li>
+										<li>
+											<span class="realm client"></span>
+											<a href="../../Модули/cui/#DrawCircle">
+DrawCircle											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -205,6 +215,182 @@ update											</a>
         self:Dock(FILL)
     end, self)
 end)
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CreateFont">
+					<h1><span class="realm client"></span></span>CreateFont(name, fontname, weight, size, extended)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/cui.laux#L45">Посмотреть исходники &raquo;</a>
+
+					<p>Функция создания шрифтов.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Название.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fontname</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Шрифт.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">weight</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Жирность шрифта.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">size</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Размер шрифта.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">extended</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+
+								<p> Тебе ли не похуй?</p>
+							</li>
+					</ul>
+
+
+				<h3>Example Usage</h3>
+					<pre><code>CUI.CreateFont('Test', 'Arial', 500, 15, true)
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DrawCircle">
+					<h1><span class="realm client"></span></span>DrawCircle(sx, sy, radius, vertexCount, color, angle)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/cui.laux#L75">Посмотреть исходники &raquo;</a>
+
+					<p>Функция создания кругов, есть возможность делать сектора.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sx</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Расположение по X.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">sy</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Расположение по Y.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">radius</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Радиус круга.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">vertexCount</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Количество "Вершин".</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">color</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+
+								<p> цвет круга.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">angle</span>
+
+									<span class="tag"><span class="type">angle</span></span>
+
+
+								<p> Градусы.</p>
+							</li>
+					</ul>
+
+
+				<h3>Example Usage</h3>
+					<pre><code>CUI.DrawCircle(0, 0, 25, 360, Color(255, 255, 255), 1)
 </code></pre>
 
 		</section>
