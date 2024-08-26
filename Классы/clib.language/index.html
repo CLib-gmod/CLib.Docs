@@ -2,10 +2,10 @@
 
 <html>
 	<head>
-		<title>CLib.String - CLib Docs</title>
+		<title>CLib.Language - CLib Docs</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="CLib.String - CLib Docs" />
+		<meta property="og:title" content="CLib.Language - CLib Docs" />
 		<meta property="og:site_name" content="CLib Docs" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -29,7 +29,7 @@
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../Модули/clib.string/">CLib.String</a></summary>
 
 									<ul>
@@ -84,7 +84,7 @@ NiceSize											</a>
 
 					<ul>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../Классы/clib.language/">CLib.Language</a></summary>
 
 									<ul>
@@ -169,7 +169,7 @@ ChangeTheme											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>CLib.String</h1>
+	<h1>CLib.Language</h1>
 	<h2>
 
 </h2>
@@ -183,14 +183,14 @@ ChangeTheme											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="CLib.String.Random">
-					<h1><span class="realm client"></span></span>CLib.String.Random(len)</h1>
+				<a class="anchor" id="CLib.L">
+					<h1><span class="realm client"></span></span>CLib.L(parse, ...)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/string.laux#L11">Посмотреть исходники &raquo;</a>
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/languages/languages.laux#L28">Посмотреть исходники &raquo;</a>
 
-					<p>Функция генерации рандомной строки</p>
+					<p>Функция перевода</p>
 			</header>
 
 
@@ -200,12 +200,23 @@ ChangeTheme											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">len</span>
+								<span class="tag parameter">parse</span>
 
-									<span class="tag"><span class="type">number</span></span>
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> Длина строки</p>
+								<p> Паттерн по которому будет искаться строка</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Аргументы для string.format</p>
 							</li>
 					</ul>
 
@@ -216,7 +227,53 @@ ChangeTheme											</a>
 							<li>
 									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
 
-								<p>Случайно сгенерированная строка</p>
+								<p>Строка найденная в таблице языка либо первый аргумент(что соотвествует тому что в таблице нет нужного паттерна)</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>CLib.L"name"
+ CLib.L("notfound", 'Предмет', '5')
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CLib.Language.Select">
+					<h1><span class="realm client"></span></span>CLib.Language.Select(lang)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/languages/languages.laux#L41">Посмотреть исходники &raquo;</a>
+
+					<p>Функция смены языка</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">lang</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Новый язык</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Изменён ли язык</p>
 							</li>
 
 				</ul>

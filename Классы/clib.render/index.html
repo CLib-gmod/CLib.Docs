@@ -2,10 +2,10 @@
 
 <html>
 	<head>
-		<title>CLib.String - CLib Docs</title>
+		<title>CLib.Render - CLib Docs</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="CLib.String - CLib Docs" />
+		<meta property="og:title" content="CLib.Render - CLib Docs" />
 		<meta property="og:site_name" content="CLib Docs" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -29,7 +29,7 @@
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../Модули/clib.string/">CLib.String</a></summary>
 
 									<ul>
@@ -105,7 +105,7 @@ CLib.Language.Select											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../Классы/clib.render/">CLib.Render</a></summary>
 
 									<ul>
@@ -169,7 +169,7 @@ ChangeTheme											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>CLib.String</h1>
+	<h1>CLib.Render</h1>
 	<h2>
 
 </h2>
@@ -183,14 +183,14 @@ ChangeTheme											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="CLib.String.Random">
-					<h1><span class="realm client"></span></span>CLib.String.Random(len)</h1>
+				<a class="anchor" id="CLib.Render">
+					<h1><span class="realm client"></span></span>CLib.Render(panel, draw)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/string.laux#L11">Посмотреть исходники &raquo;</a>
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/render/baserender.laux#L43">Посмотреть исходники &raquo;</a>
 
-					<p>Функция генерации рандомной строки</p>
+					<p>Базовый класс рендера, поддерживающий обычную отрисовку без текста и т.п.</p>
 			</header>
 
 
@@ -200,26 +200,131 @@ ChangeTheme											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">len</span>
-
-									<span class="tag"><span class="type">number</span></span>
+								<span class="tag parameter">panel</span>
 
 
-								<p> Длина строки</p>
+
+								<p> Панель относительно которой будет происходить рендер.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">draw</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+
+								<p>[opt] Функция отрисовки.</p>
 							</li>
 					</ul>
 
 
-				<h3>Returns</h3>
-				<ul>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="CLib.TextRender">
+					<h1><span class="realm client"></span></span>CLib.TextRender(panel, draw)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/render/textrender.laux#L19">Посмотреть исходники &raquo;</a>
+
+					<p>Класс отрисовки с текстом.  Текст выносится в отдельную таблицу и к сожалению <code>рендерится каждый кадр</code><code>, </code>отдельно от остальных элементов``</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
 
 							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+								<span class="tag parameter">panel</span>
 
-								<p>Случайно сгенерированная строка</p>
+
+
+								<p> Панель относительно которой будет происходить рендер.</p>
 							</li>
+					</ul>
 
-				</ul>
+					<ul>
+
+							<li>
+								<span class="tag parameter">draw</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+
+								<p>[opt] Функция отрисовки.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="generateMaterial">
+					<h1><span class="realm client"></span></span>generateMaterial(width, height)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/render/baserender.laux#L79">Посмотреть исходники &raquo;</a>
+
+					<p>Приватный метод генерации материала</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">width</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">height</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="update">
+					<h1><span class="realm client"></span></span>update()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/CLib-gmod/CLib.Main/tree/main/.laux/lib/render/baserender.laux#L68">Посмотреть исходники &raquo;</a>
+
+					<p>Обновляет отрисовку панели напрямую</p>
+			</header>
+
+
 
 
 		</section>
